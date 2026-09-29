@@ -17,10 +17,10 @@ Use cases beskriver vilket observerbart beteende systemet ska ha.
 
 Följande dokument används i prioritetsordning:
 
-1. `Development instructions/user_cases_actual.md`
+1. `User Cases/user_cases_actual.md`
    — dokumenterar aktuellt och verifierat beteende.
 
-2. `Development instructions/User_Cases.md`
+2. `User Cases/User_Cases.md`
    — ursprunglig funktionell specifikation.
 
 3. `Development instructions/Architecture.md`
@@ -78,8 +78,8 @@ att invarianten först ändras som en explicit arkitekturell förändring.
 
 Läs relevanta delar av:
 
-- `Development instructions/user_cases_actual.md`
-- `Development instructions/User_Cases.md`
+- `User Cases/user_cases_actual.md`
+- `User Cases/User_Cases.md`
 - `Development instructions/Architecture.md`
 
 Identifiera:
@@ -171,7 +171,7 @@ Ett UC behöver alltså inte motsvara exakt ett test.
 
 När implementation och tester är färdiga ska:
 
-`Development instructions/user_cases_actual.md`
+`User Cases/user_cases_actual.md`
 
 uppdateras i samma ändring.
 
@@ -184,6 +184,9 @@ tillstånd.
 ---
 
 # Format för användarfall
+
+Användarfall skrivs i markdown och sparas i katalogen `User Cases/` under
+projektets root.
 
 ```markdown
 ## Användarfall N: <Titel>

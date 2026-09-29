@@ -342,6 +342,9 @@ Relevant documentation includes:
 - Socket event documentation
 - deployment documentation
 
+User Case documents are written in markdown and stored in the
+`User Cases/` directory at the repository root.
+
 When an external contract changes, update all documentation that defines
 or references that contract.
 
