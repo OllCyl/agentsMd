@@ -1,4 +1,4 @@
-# AI infra byggstenar
+# AI infra lager
 
 | Lager | Ansvar |
 | --- | --- |
@@ -8,6 +8,49 @@
 | **AI application layer** | Bygga själva AI-beteendet och applikationslogiken |
 | **Model layer** | Abstrahera och tillhandahålla modeller |
 | **Platform layer** | Säkerhet, drift, observability, governance och deployment |
+
+```mermaid
+flowchart TB
+
+    APP["AI APPLICATION LAYER<br/><br/>
+    RAG · Prompt management<br/>
+    Tool calling · Agent runtime<br/>
+    Agent loop · Guardrails"]
+
+    DATA["DATA LAYER<br/><br/>
+    Samla in · Förbereda<br/>
+    Kvalitetssäkra"]
+
+    KNOW["KNOWLEDGE LAYER<br/><br/>
+    Dela upp · Göra sökbart<br/>
+    Söka · Rangordna"]
+
+    INT["INTEGRATION LAYER<br/><br/>
+    System · Tjänster<br/>
+    Verktyg · Processer"]
+
+    MODEL["MODEL LAYER<br/><br/>
+    Språkmodell · Sökmodell<br/>
+    Relevansmodell"]
+
+    PLATFORM["PLATFORM LAYER<br/><br/>
+    Behörighet · Säkerhet<br/>
+    Övervakning · Utvärdering<br/>
+    Loggning · Drift"]
+
+    DATA --> KNOW
+    KNOW --> APP
+    INT --> APP
+
+    MODEL -. stödjer .-> APP
+    MODEL -. stödjer .-> KNOW
+
+    PLATFORM -. stödjer .-> DATA
+    PLATFORM -. stödjer .-> KNOW
+    PLATFORM -. stödjer .-> INT
+    PLATFORM -. stödjer .-> APP
+    PLATFORM -. stödjer .-> MODEL
+```
 
 ## LLM flöde enkel
 
